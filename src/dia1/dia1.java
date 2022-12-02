@@ -1,9 +1,11 @@
+package dia1;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
 
-public class day01 {
+public class dia1 {
     public static void main(String[] args) throws FileNotFoundException {
 
         boolean finFcihero = false;

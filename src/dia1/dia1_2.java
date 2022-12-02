@@ -1,19 +1,18 @@
+package dia1;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Collection;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.TreeSet;
-import java.util.*;
 
-public class day_01_part2 {
+public class dia1_2 {
     public static void main(String[] args) throws FileNotFoundException {
 
-        Set<Integer> duendes = new TreeSet<Integer>();
+        TreeSet<Integer> duendes = new TreeSet<Integer>();
         int suma = 0;
         int masCalorias = 0;
 
-        Scanner entrada = new Scanner(new File("src/calorias"));
+        Scanner entrada = new Scanner(new File("src/Dia_01/calorias"));
         while (entrada.hasNextLine()) {
             String linea = entrada.nextLine();
             if (linea.length() != 0) {
@@ -24,12 +23,12 @@ public class day_01_part2 {
                 suma = 0;
             }
         }
-        int ultimo = ((TreeSet<Integer>) duendes).pollLast();
-        System.out.println(ultimo);
-        ultimo = ultimo + ((TreeSet<Integer>) duendes).pollLast();
-        System.out.println(ultimo);
-        ultimo = ultimo+  ((TreeSet<Integer>) duendes).pollLast();
-        System.out.println(ultimo);
 
+        /*for (int i = 0; i < 3; i++) {
+            masCalorias = masCalorias + duendes.pollLast();
+        }*/
+        while (!duendes.isEmpty()){
+            System.out.println(duendes.pollLast());
+        }
     }
 }

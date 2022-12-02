@@ -8,12 +8,11 @@ import java.util.*;
 public class dia1 {
     public static void main(String[] args) throws FileNotFoundException {
 
-        boolean finFcihero = false;
         int suma = 0;
         int masCalorias = 0;
 
         Scanner entrada = new Scanner(new File("src/calorias"));
-        while (entrada.hasNextLine() && !finFcihero){
+        while (entrada.hasNextLine()){
             String linea = entrada.nextLine();
             if (linea.length() != 0) {
                 int number = Integer.parseInt(linea);
